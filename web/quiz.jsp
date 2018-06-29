@@ -59,7 +59,8 @@
             function showScores() {
                 var gameOverHTML = "<h1>Result</h1>";
                 gameOverHTML += "<h2 id='score'> Has acertado: " + quiz.score + "</h2>";
-                gameOverHTML +="<a href='enviandoQuizPuntaje.jsp'>Ir al menu principal</a>";
+//                gameOverHTML +="<a href='enviandoQuizPuntaje.jsp'>Ir al menu principal</a>";
+                gameOverHTML += "<input type='button' value='test'>";
                 var element = document.getElementById("quiz");
                 element.innerHTML = gameOverHTML;
                 guess("btn" + 1, 0);
