@@ -554,7 +554,7 @@ cursor:pointer;*/
                 <h2> Preguntas</h2>
                 <%
                     int i;
-                    for(i=1;i<=2;i++){%>
+                    for(i=1;i<=1;i++){%>
                     <div class="dragDropSmallBox" id="q<% String.valueOf(i);%>"><%out.print(rs.getString("pregunta"+i));%></div>
                     <div class="destinationBox"></div>
                  <%}
@@ -591,7 +591,7 @@ cursor:pointer;*/
                 </br>
                 <h2> Respuestas</h2></br></br>
                 <%
-                    for(i=1;i<=2;i++){%>
+                    for(i=1;i<=1;i++){%>
                       <div class="dragDropSmallBox" id="a<%String.valueOf(i);%>"><%out.print(rs.getString("respuesta"+i));%></div>  
                <%     }
                 %>
