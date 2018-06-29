@@ -59,6 +59,7 @@
             function showScores() {
                 var gameOverHTML = "<h1>Result</h1>";
                 gameOverHTML += "<h2 id='score'> Has acertado: " + quiz.score + "</h2>";
+                gameOverHTML +="<a href='funciona.html'>SIGUIENTE</a>";
                 var element = document.getElementById("quiz");
                 element.innerHTML = gameOverHTML;
                 guess("btn" + 1, 0);
