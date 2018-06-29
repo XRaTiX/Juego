@@ -9,9 +9,15 @@
     Class.forName(puenteJDBC);
     Connection con = DriverManager.getConnection("jdbc:ucanaccess://"+nombre_bd,usuarioBD,passwordBD);
     Statement st = con.createStatement();
-    String puntaje = session.getAttribute("").toString();
-    st.executeUpdate("update usuarios_puntajes set nivel"+level+"_correctos = '"+correct+"',nivel"+level+"_incorrectos = '"+incorrect+"' where ID = '"+session.getAttribute("id") +"'");
-    session.setAttribute("quiz",level);
-    response.sendRedirect("quiz.jsp");
-    
+    String pageToBack = session.getAttribute("type").toString();
+    String puntaje = request.getParameter("puntaje");
+    String quiz = session.getAttribute("quiz").toString(); 
+    st.executeUpdate("update usuarios_puntajes set quiz"+quiz+"_puntajes = '"+puntaje+"' where ID = '"+session.getAttribute("id") +"'");
+    session.removeAttribute("quiz");
+    if(pageToBack.equals("1")){
+        response.sendRedirect("Estudiante.jsp");
+    }
+    else{
+        response.sendRedirect("Administrativo.jsp");
+    }
 %>
