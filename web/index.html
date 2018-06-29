@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Login XP</title>
+	<link rel="stylesheet" href="scriptindex/estilos.css"><!-- llamado de css -->
+      <!--  <link rel="stylesheet" href="conexion.jsp">-->
+</head>
+<body>
+
+    <div class="contenedor-form">
+        <div class="toggle">
+            <span> Registro </span>
+        </div>
+				<!-- inicio del formulario iniciar sesion -->
+        <div class="formulario" id="inicio" >
+            <h2>Iniciar Sesión</h2>
+            <form action="login.jsp">
+                <input type="text" placeholder="Cedula" name="username" required>
+                <input type="password" placeholder="password" name="password" required>
+                <input type="submit" value="Login">
+            </form  >
+        </div>
+        <!-- crear formulario -->
+        <div class="formulario">
+            <h2>Registro</h2>
+            <form action="registrarUsuario.jsp" method="post">
+                <input type="text" placeholder="Cedula" name="username" required>
+                <input type="password" placeholder="password" pattern=".{3,}" name="password" required>
+                <input type="text" placeholder="Nombre" name="name" required>
+                <input type="hidden" value="2" name="type">
+                <input type="hidden" value="index" name="page">
+                <input type="submit" value="Registrarse">
+            </form>
+            <form action="´login.jsp0"
+        </div>
+        <div class="reset-password">
+            <a href="contraseña.html">Olvide mi Contraseña?</a>
+        </div>
+		
+    </div>
+	<!-- script encargado de su funcionamiento -->
+ </title>
+    <script src="scriptindex/jquery-3.1.1.min.js"></script>  
+    <script src="scriptindex/main.js"></script>
+	<script src="scriptindex/index.jsp"></script>
+
+</body>
+</html>

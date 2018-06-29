@@ -1,0 +1,180 @@
+      
+ @font-face { font-family: "danube"; 
+			src: url("fonts/danube.woff") format("woff"),                
+			url("fonts/danube.ttf") format("truetype");        
+			}    
+* {
+
+form "action{
+	background:#FFF;
+}
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}	
+   body { background-size: cover;
+			/*background-attachment: fixed;*/
+		   text-align: center;       
+           margin: 0 auto;           
+		   width: 600px;            
+		   height: 500px;            
+		   margin-top: 150px;          
+           background-image: url(./img/bg2.jpg);   
+
+		   }  
+	
+
+.hidden {  -webkit-transition: opacity 1s;            
+			z-index: 0;             
+			opacity: 0;         
+			} 
+.contenedor-form input[type="submit"] {
+    background: #ff851b;
+    color: #FFF;
+    width: 100%;
+    border: absolute;
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: Comic Sans MS;
+
+}			
+.visible {   -webkit-transition: opacity 1s;             
+			z-index: 1;            
+			opacity: 1;         
+			}        
+.frame {   position: absolute;          
+		   width: auto; /*  
+		   -webkit-user-select: none;   */           
+		   height: 500px;             
+		   font-family: "comic sans-serif";            
+		   color: #fff;             
+		   text-shadow: 0px 0px 20px #00FF00;           
+		           
+		   font-size: 12px;        
+		   }        
+ .frame button { -webkit-transition: border-radius 1s, text-shadow 1s, color 1s;     
+              font-family: "comic sans-serif";           
+			  font-size: 22px;  /*cambiar tamaño de las opciones el menu*/           
+			  color: #9900cc;           
+			  margin: 5px;          
+			  padding: 3px;          
+			  width: 300px;            
+			  background: none;           
+			  text-shadow: 0px 0px 8px #d10bef;      
+			  border: 1px solid #fff;            
+			  border-radius: 3px;           
+			  text-decoration: none;           
+			  border-color: #ff6600 #ff6600 #ff6600;          
+			  box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.5);   
+			  }        
+ .frame button:hover {   border-radius: 20px;         
+					  text-shadow: 0px 0px 50px #d10bef;           
+					  color: white;        
+					  }         
+.frame button:active { text-shadow: 0px 0px 20px #ff6600;      
+   }        
+
+  div id :"game"{  position: relative;
+			top: 7px;
+
+			width: 100px;
+			height: 30px;
+			font-size: 12px;
+			line-height: 25px;
+
+} 
+.contenedor-form {
+    background: rgb(0,0,0,.7);
+    max-width: 850px;   
+   margin: 58px auto;
+    border-radius: 45px;
+    color: #fff;
+    width: 120%;
+
+    position: relative;
+    padding: 210px;
+} 
+.contenedor-form .toggle {
+
+position: absolute;
+    top: 15px;
+
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    /*line-height: 25px;
+    text-align: center;*/
+
+
+}
+h1{
+	color: #FFF;
+
+    font-size: 30px;
+
+    font-family: Comic Sans MS;
+
+}
+
+
+
+</style>   
+/*
+  <script>       
+  function Game(gameDiv)        
+  {             var frames = [];          
+  var framesNames = [];           
+  for (var i=0; i<gameDiv.childNodes.length; i++)        
+  {                 var id = gameDiv.childNodes[i].id;               
+  if (id != undefined)                
+  {   
+  var child = gameDiv.childNodes[i];                    
+  if (child.classList.contains("frame"))                   
+  {   frames[id] = child;                
+  framesNames.push(id);                    
+  }               
+  }            
+  }            
+  function setFrameVisible(name)             {                 frames[name].classList.remove("hidden");                 frames[name].classList.add("visible");             }             function setFrameHidden(name)             {                 frames[name].classList.remove("visible");                 frames[name].classList.add("hidden");             }             return {                 "setFrameVisible": setFrameVisible,                 "setFrameHidden": setFrameHidden             };         }         window.addEventListener("load", function ()         {             game = new Game(document.getElementById("game"));         });         var game;     </script> 
+
+  <body>      
+  <div id="game">       
+  <div id="main" class="frame visible">            
+  <h1>     MENU XP               </h1>                 <button onclick="game.setFrameVisible('canvas');game.setFrameHidden('main');"> 
+    JUGAR    </button>        <button onclick="game.setFrameVisible('highscores');game.setFrameHidden('main');">                     PUNTUACI&Oacute;N             </button>                 <button onclick="game.setFrameVisible('about');game.setFrameHidden('main');">                     CREDITOS               </button>             </div>             <div id="canvas" class="frame hidden">                 <canvas></canvas>                 <button onclick="game.setFrameVisible('main');game.setFrameHidden('canvas');">                     Volver al menu                 </button>             </div>             <div id="highscores" class="frame hidden">                 <h1>                     PUNTUACIONES MAS ALTAS              </h1>                 <button onclick="game.setFrameVisible('main');game.setFrameHidden('highscores');">                     Volver al menu                 </button>             </div>             <div id="about" class="frame hidden">                 <h2>                     ProgrammingHeroes                 </h2>                 <br />                 <a href="http://programmingheroes.blogspot.com.es/">                     <img src="img/ph.png" style="width: 100px; height: 120px;"/>                 </a>                 <br />                 <button onclick="game.setFrameVisible('main');game.setFrameHidden('about');">                     Volver al menu                 </button>             </div>         </div>     </body> </html>*/
+
+Labels:  CSS3  HTML5  JavaScript  Juegos  Videotutorial
+    
+Related Posts
+
+"Simón Dice..." En El Navegador Con La Webcam - SimónHTML5Cam
+10.- Juegos Y Multimedia HTML5 - Reproductor De Vídeo
+4 - Juegos Multimedia HTML5 - Mejorando Animaciones (RequestAnimationFrame, Fps, Full-Page)
+Entrada más reciente
+Entrada antigua
+No hay comentarios :
+Publicar un comentario
+ 
+Enlaces a esta entrada
+Crear un enlace
+
+SOMOS SOCIABLES :)
+Siguenos en Facebook Siguenos en YouTube 
+ 
+
+ 
+ 
+
+
+ETIQUETAS
+Android Blog Cámara Web Canvas CSS3 Decompilar Héroes Hola Mundo HTML5 Instalación Java JavaScript JMF Juegos Linterna Linux Tutorial Ubuntu Videotutorial WebCam WebWorkers
+A LA GENTE LE GUSTA...
+ 
+Super Mario Bros en Java
+ 
+Recursos para empezar a estudiar Machine Learning
+05.- Crear una Linterna para Android - Botón on/off y clase Torch
+03.- Crear una Linterna para Android - Encender flash en modo linterna
+ 
+Creación de una cámara de 

@@ -1,0 +1,50 @@
+body{
+  background: #9900cc;
+}
+h1,h2 {
+  color: #fff;
+  text-align: center; 
+}
+
+#cuadro1, #cuadro2{
+	float: left;
+	width: 220px;
+	height: 280px;
+	padding: 90px;
+	margin: 50px;
+}
+
+#cuadro1{
+	background: #ff851b;
+}
+
+#cuadro2 {
+	background: #00FF00
+}
+
+
+
+
+
+.cuadradito {
+	background: #9900cc;
+	border: 2px solid #ff851b;
+	width: 5px;
+	height: 5px;
+	padding: 0 10px 15px;
+	margin: 5px;
+}
+
+#arrastrable1 {
+	background: #9900cc;
+	border: 2px solid #ff851b;
+}
+
+#arrastrable2 {
+	background: #9900cc;
+	border: 2px solid #ff851b;
+}
+
+#arrastrable3 {
+	background: #9900cc;
+	border: 2px solid #ff851b;
