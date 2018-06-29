@@ -552,7 +552,6 @@ cursor:pointer;*/
             </br></br>
             <div id="questionDiv">
                 <h2> Preguntas</h2>
-                <h2>LOOOL</h2>
                 <%
                     int i;
                     for(i=1;i<=2;i++){%>
