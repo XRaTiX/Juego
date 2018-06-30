@@ -14,6 +14,7 @@
     String quiz = session.getAttribute("quiz").toString(); 
     st.executeUpdate("update usuarios_puntajes set quiz"+quiz+"_puntajes = '"+puntaje+"' where ID = '"+session.getAttribute("id") +"'");
     session.removeAttribute("quiz");
+    st.executeUpdate("update usuarios_niveles set nivel2 = '1' where ID = '"+session.getAttribute("id")+"'");
     if(pageToBack.equals("1")){
         response.sendRedirect("Estudiante.jsp");
     }

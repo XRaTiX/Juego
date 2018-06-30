@@ -1,6 +1,21 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="Clases.Database"%>
+<%@page import="java.sql.Connection"%>
 <%@page import="Clases.Usuarios_set_get"%>
 <%@page import="java.util.LinkedList"%>
 <%@page import="Clases.Usuarios"%>
+<%
+    Database database = new Database();
+    String nombre_bd = database.nombre_bd();
+    String usuarioBD="";
+    String passwordBD="";
+    String puenteJDBC = "net.ucanaccess.jdbc.UcanaccessDriver"; //Se declara el driver JDBC a utilizar
+    Class.forName(puenteJDBC);
+    Connection con = DriverManager.getConnection("jdbc:ucanaccess://"+nombre_bd,usuarioBD,passwordBD);
+    Statement st = con.createStatement();
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -147,22 +162,35 @@ cursor:pointer;*/
             <div class="konaBody">
                 <div id="description">
                     <h1>Estadisticas de usuario</h1>
-                    <p>Estas son tus estadisticas en todo el juego <%out.print(session.getAttribute("name"));%></p>	
+                    <p>Estas son tus estadisticas en todo el juego</p>
+                    <p><%out.print(session.getAttribute("name"));%></p>
+                    <p><%out.print(session.getAttribute("id"));%></p>
+                    <%
+                        ResultSet rs = st.executeQuery("select * from usuarios_puntajes where ID = '"+session.getAttribute("id")+"'");
+                        rs.next();
+                    %>
                     <table>
                         <tr>
-                            <td>Nivel</td>
+                            <td></td>
                             <th>Puntos correctos</th>
                             <th>Puntos incorrectos</th>
-                            
+                            <th>Quiz</th>
                         </tr>
-                        <% for (int i = 0; i < usuarios.size(); i++) {%>
+                        <% for (int i = 1; i<=2; i++) {%>
                         <tr>
-                            <td><% out.print(usuarios.get(i).getId());%></td>
-                            <td><% out.print(usuarios.get(i).getNombre());%></td>
-                            
+                            <td>Nivel <%out.print(String.valueOf(i)); %></td>
+                            <td><%out.print(rs.getString("nivel"+i+"_correctos"));%></td>
+                            <td><%out.print(rs.getString("nivel"+i+"_incorrectos"));%></td>
+                            <td><%out.print(rs.getString("quiz"+i+"_puntajes"));%></td>
                         </tr>
-                        <%}%>
+                        <%}
+                        con.close();
+                        %>
                     </table>
+                    <br>
+                    <form action="Administrativo.jsp">
+                        <input type="submit" value="Volver al menu principal">
+                    </form>
                 </div>
 
             </div>

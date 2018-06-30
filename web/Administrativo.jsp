@@ -116,6 +116,7 @@
 
       </div>
       <div id="canvas" class="frame hidden">
+          <h1>NIVELES</h1>
 	  	</br></br>
                 <form action="verificarAccesoNivel.jsp">
                    	<!-- opciones dentro de jugar -->
@@ -142,8 +143,20 @@
       </div>
       <div id="highscores" class="frame hidden">
         <h1>
-         PUNTUACIONES 
+         ESTADISTICAS 
         </h1>
+        <form action="estadistica_jugador.jsp">
+            <button onclick="game.setFrameVisible('main');game.setFrameHidden('canvas');">
+<!--		  <a id="nivel1" href="nivel1.jsp">NIVEL 1</a>-->
+                <input type="submit" value="Mis Estadisticas">
+            </button></br></br>
+        </form>
+        <form action="buscar_jugador">
+           <button onclick="game.setFrameVisible('main');game.setFrameHidden('canvas');">
+      	   <input type="submit" name="id" value="Buscar estadisticas de un jugador">
+           </button></br></br>           
+          </form>
+            
         <button onclick="game.setFrameVisible('main');game.setFrameHidden('highscores');">
           VOLVER AL MEN&Uacute;
         </button>

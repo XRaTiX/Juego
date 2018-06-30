@@ -21,7 +21,7 @@
         if(!rs2.next()){
             int i = st.executeUpdate("insert into usuarios (ID,user_password,user_name,user_type) values ('"+id+"','"+password+"','"+name+"','"+type+"')");
         i = st.executeUpdate("insert into usuarios_niveles (nivel1,nivel2,ID) values ('1','0','"+id+"')");
-        st.executeUpdate("insert into usuarios_puntajes (ID,nivel1_correctos,nivel1_incorrectos,quiz1_puntajes) values ('"+id+"','0','0','0')");
+        st.executeUpdate("insert into usuarios_puntajes (ID,nivel1_correctos,nivel1_incorrectos,quiz1_puntajes,nivel2_correctos,nivel2_incorrectos,quiz2_puntajes) values ('"+id+"','0','0','0','0','0','0')");
         if(i==1){%>
             <script type="text/javascript">
             confirm('Usuario registrado correctamente');
