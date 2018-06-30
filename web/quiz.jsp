@@ -59,7 +59,11 @@
             function showScores() {
                 var gameOverHTML = "<h1>Result</h1>";
                 gameOverHTML += "<h2 id='score'> Has acertado: " + quiz.score + "</h2>";
-                gameOverHTML +="<a href='funciona.html'>Ir al menu principal</a>";
+//                gameOverHTML +="<a href='enviandoQuizPuntaje.jsp'>Ir al menu principal</a>";
+                gameOverHTML += "<form action='enviandoQuizPuntaje.jsp'>\n\
+                <input type='hidden' name='puntaje' value="+quiz.score+">\n\
+                <input type='submit' value='Ir al menu principal'>\n\
+                </form>";
                 var element = document.getElementById("quiz");
                 element.innerHTML = gameOverHTML;
                 guess("btn" + 1, 0);
@@ -79,7 +83,6 @@
                rs = st.executeQuery("select * from preguntas_quiz where quiz = '"+session.getAttribute("quiz")+"'");
                rs.next();
                int i;
-               session.removeAttribute("quiz");
                for(i=1;i<=5;i++){%>
                    new Question("<%out.print(rs.getString("pregunta"+i));%>",["<%out.print(rs.getString("respuesta"+i+"_1"));%>","<%out.print(rs.getString("respuesta"+i+"_2"));%>","<%out.print(rs.getString("respuesta"+i+"_3"));%>","<%out.print(rs.getString("respuesta"+i+"_4"));%>"],"<%out.print(rs.getString("correcta"+i));%>"),
               <% }

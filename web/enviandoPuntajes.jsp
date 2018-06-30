@@ -14,6 +14,7 @@
     String incorrect =request.getParameter("incorrect");
     st.executeUpdate("update usuarios_puntajes set nivel"+level+"_correctos = '"+correct+"',nivel"+level+"_incorrectos = '"+incorrect+"' where ID = '"+session.getAttribute("id") +"'");
     session.setAttribute("quiz",level);
+    session.removeAttribute("nivel");
     response.sendRedirect("quiz.jsp");
     
 %>
