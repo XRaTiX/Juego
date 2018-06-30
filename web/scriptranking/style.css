@@ -21,7 +21,7 @@ and open the template in the editor.
 body {
   font-family: "soleil", "roboto", sans-serif;
   overflow-x: hidden;
-  background-color: #f1f1f1;
+  background-color: #ff6600;
   color: #040404;
 }
 
@@ -211,15 +211,15 @@ body {
 .footer-btn{
   padding: 8px 12px;
   margin: 0 15px;
-  background-color: #FFF;
+  background-color: #ff6600;
   border-radius: 4px;
-  color: #32b8df;
+  color: #ffffff;
   border: 1px solid #3498db;
 }
 
 .leaderboard-footer{
   padding: 20px 3vw;
-  background-color: #32b8df;
+  background-color: #9900cc;
   border: 1px solid #0196c1;
   color: #FFF;
 }
@@ -261,7 +261,7 @@ body {
 }
 
 .leaderboard-header > .leaderboard-row{
-  background-color: #32b8df;
+  background-color: #9900cc;
   color: #FFFFFF;
   border-left: 1px solid #0196c1;
   border-bottom: 1px solid #0196c1;
@@ -282,20 +282,21 @@ body {
 }
 
 .row-alt{
-  background-color: #F2f2f2;
+  background-color: #E6E6FA;
 }
 
 .row-button{
   padding: 12px 40px 10px 40px;
-  color: #080808;
+  font-weight: bold;
+  color: #4B0082;
   border-top: 1px solid #CCC;
   border-right: 1px solid #CCC;
-  background-color: #FFFFFF;
+  background-color: #9900cc;
 }
 
 .table-tab:hover,
 .row-button:hover{
-  background-color: #f2f2f2;
+  background-color: #9932CC;
 }
 
 .row-button--active{
@@ -322,7 +323,8 @@ body {
 
 .row-button--active,
 .tab-active{
-  background-color: #32B8DF;
+  background-color: #9900cc;
+  font-weight: normal;
   color: #FFFFFF;
   border-left: 1px solid #0196c1;
   border-top: 1px solid #0196c1;
@@ -331,7 +333,7 @@ body {
 
 .row-button--active:hover,
 .tab-active:hover{
-  background-color: #20add6;
+  background-color: #9932CC;
 }
 
 .row--header{
@@ -362,7 +364,7 @@ body {
 }
 
 footer {
-  background-color: #3498db;
+  background-color: #9900cc;
   padding: 25px 200px;
   color: #FFFFFF;
 }
