@@ -110,6 +110,16 @@
           <input type="submit" value="Eliminar Usuario">
         </button></br></br></br>
         </form>
+        <form action="ModificarNiveles.jsp"
+	  <button onclick="game.setFrameVisible('main');game.setFrameHidden('su');">
+          <input type="submit" value="Modificar preguntas de los niveles">
+        </button></br></br></br>
+        </form>
+        <form action="ModificarQuiz.jsp"
+	  <button onclick="game.setFrameVisible('main');game.setFrameHidden('su');">
+          <input type="submit" value="Modificar preguntas de los quizes">
+        </button></br></br></br>
+        </form>
 	  <button onclick="game.setFrameVisible('main');game.setFrameHidden('su');">
           VOLVER AL MEN&Uacute;
         </button></br></br></br>
