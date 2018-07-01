@@ -554,36 +554,11 @@ cursor:pointer;*/
                 <h2> Preguntas</h2>
                 <%
                     int i;
-                    for(i=1;i<=1;i++){%>
-                    <div class="dragDropSmallBox" id="q<% String.valueOf(i);%>"><%out.print(rs.getString("pregunta"+i));%></div>
+                    for(i=1;i<=15;i++){%>
+                    <div class="dragDropSmallBox" id="q<%out.print(String.valueOf(i));%>"><%out.print(rs.getString("pregunta"+i));%></div>
                     <div class="destinationBox"></div>
                  <%}
                 %>
-<!--                <div class="dragDropSmallBox" id="q1">Siglas de Xtreme Programing</div>
-                <div class="destinationBox"></div>
-                <div class="dragDropSmallBox" id="q2">Cuantos Ciclos posee XP</div>
-                <div class="destinationBox"></div>-->
-<!--                <div class="dragDropSmallBox" id="q3">Cuantos Roles posee XP</div>
-                <div class="destinationBox"></div>
-                <div class="dragDropSmallBox" id="q4">Correccion de todos los errores</div>
-                <div class="destinationBox"></div>
-                <div class="dragDropSmallBox" id="q5">Pruebas unitarias continuas</div>
-                <div class="destinationBox"></div>
-                <div class="dragDropSmallBox" id="q6">La simplicidad y la comunicacion</div>
-                <div class="destinationBox"></div>
-                <div class="dragDropSmallBox" id="q7"> identifica que se debe hacer y que no se debe hacer</div>
-                <div class="destinationBox"></div>
-                <div class="dragDropSmallBox" id="q9">Desventajas</div>
-                <div class="destinationBox"></div>
-                <div class="dragDropSmallBox" id="q10">Que principio sigue el Diseno XP</div>
-                <div class="destinationBox"></div>
-                <div class="dragDropSmallBox" id="q11">XP estimula el uso de tarjetas</div>
-                <div class="destinationBox"></div>
-                <div class="dragDropSmallBox" id="q14"> CRC</div>
-                <div class="destinationBox"></div>
-                <div class="dragDropSmallBox" id="q15"> Elemento que menciona XP referentes a la codificacion</div>
-                <div class="destinationBox"></div>-->
-
             </div>
 
 
@@ -591,29 +566,10 @@ cursor:pointer;*/
                 </br>
                 <h2> Respuestas</h2></br></br>
                 <%
-                    for(i=1;i<=1;i++){%>
-                      <div class="dragDropSmallBox" id="a<%String.valueOf(i);%>"><%out.print(rs.getString("respuesta"+i));%></div>  
+                    for(i=1;i<=15;i++){%>
+                      <div class="dragDropSmallBox" id="a<%out.print(String.valueOf(i));%>"><%out.print(rs.getString("respuesta"+i));%></div>  
                <%     }
                 %>
-<!--                <div class="dragDropSmallBox" id="a1">XP</div>
-                <div class="dragDropSmallBox" id="a2">4</div>-->
-<!--                <div class="dragDropSmallBox" id="a3">7</div>
-                <div class="dragDropSmallBox" id="a4">Antes de anadir nueva funcionalidad</div>
-                <div class="dragDropSmallBox" id="a5">Frecuentemente repetidas y automatizadas</div>
-                <div class="dragDropSmallBox" id="a6">Son extraordinariamente complementarias</div>
-                <div class="dragDropSmallBox" id="a7">Comunicacion</div>
-                <div class="dragDropSmallBox" id="a9">Altas comisiones en caso de fallar</div>
-                <div class="dragDropSmallBox" id="a10">Mantenlo Sencillo (MS)</div>	
-                <div class="dragDropSmallBox" id="a11">CRC como un mecanismo eficaz </div>		
-                <div class="dragDropSmallBox" id="a14">clase-responsabilidad-colaborador</div>	
-                <div class="dragDropSmallBox" id="a15">Cliente siempre presente</div>	-->
-<!--                <div class="dragDropSmallBox" id="a9">Demasiado costoso e innecesario</div>	
-                <div class="dragDropSmallBox" id="a8">Satisfaccion del programador</div>	
-                <div class="dragDropSmallBox" id="a8">Versiones nuevas</div>	
-                <div class="dragDropSmallBox" id="a16">9</div>	
-                <div class="dragDropSmallBox" id="a17">5</div>	
-                <div class="dragDropSmallBox" id="a18">Programador</div>
-            </div>-->
 
         </div>
         <div id="dragContent"></div>
