@@ -1,3 +1,4 @@
+<%@page import="java.util.LinkedList"%>
 <%@page import="Clases.Database"%>
 <%@ page import ="java.sql.*" %>
 <%
@@ -16,12 +17,18 @@
     Class.forName(puenteJDBC);
     Connection con = DriverManager.getConnection("jdbc:ucanaccess://" + nombre_bd, usuarioBD, passwordBD);
     Statement st = con.createStatement();
-    int i;
-    for (i = 0; i <usernames.length; i++) {
-        System.out.println(usernames[i]);
-        st.executeUpdate("update usuarios set ID = '" + usernames[i] + "',user_type = '" + types[i] + "',user_name = '" + nombres[i] + "',user_password = '" + passwords[i] + "' where ID = '"+usernames[i]+"'");
-        st.executeUpdate("update usuarios_niveles set ID = '" + usernames[i] + "',nivel1 = '" + nivel1Acceso[i] + "', nivel2 = '" + nivel2Acceso[i] + "' where ID = '"+usernames[i]+"'");
-        st.executeUpdate("update usuarios_puntajes set ID = '" + usernames[i] + "',nivel1_correctos = '" + puntajeNivel1[i] + "' where ID = '"+usernames[i]+"'");
+    ResultSet rs = st.executeQuery("select ID from Usuarios");
+    LinkedList cedulas = new LinkedList();
+    while (rs.next()) {
+        cedulas.add(rs.getString("ID"));
+    }
+    int i, j, k = 0;
+    for (i = 0; i < usernames.length; i++) {
+        for (j = 0; j < cedulas.size(); j++) {
+            k = st.executeUpdate("update usuarios set ID = '" + usernames[i] + "',user_type = '" + types[i] + "',user_name = '" + nombres[i] + "',user_password = '" + passwords[i] + "' where ID = '" + cedulas.get(i) + "'");
+            st.executeUpdate("update usuarios_niveles set ID = '" + usernames[i] + "',nivel1 = '" + nivel1Acceso[i] + "', nivel2 = '" + nivel2Acceso[i] + "' where ID = '" + cedulas.get(i) + "'");
+            st.executeUpdate("update usuarios_puntajes set ID = '" + usernames[i] + "',nivel1_correctos = '" + puntajeNivel1[i] + "' where ID = '" + cedulas.get(i) + "'");
+        }
     }
     con.close();
 %>

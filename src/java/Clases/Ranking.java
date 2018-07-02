@@ -37,7 +37,7 @@ public class Ranking
     }
 
 
-    public LinkedList<Ranking_set_get> ranking_ready() throws SQLException
+    public LinkedList<Ranking_set_get> ranking_ready1() throws SQLException
     {
         LinkedList<Ranking_set_get> lista;
         lista = new LinkedList();
@@ -48,6 +48,55 @@ public class Ranking
             Ranking_set_get ranking = new Ranking_set_get();
             ranking.setUsuario(rs.getString("ID"));
             ranking.setPuntaje(rs.getInt("quiz1_puntajes"));
+            lista.add(ranking);
+        }
+        return lista;
+    }
+    
+      public LinkedList<Ranking_set_get> ranking_ready2() throws SQLException
+    {
+        LinkedList<Ranking_set_get> lista;
+        lista = new LinkedList();
+        rs = st.executeQuery("select * from usuarios_puntajes order by quiz2_puntajes desc");
+
+        while(rs.next())
+        {
+            Ranking_set_get ranking = new Ranking_set_get();
+            ranking.setUsuario(rs.getString("ID"));
+            ranking.setPuntaje(rs.getInt("quiz2_puntajes"));
+            lista.add(ranking);
+        }
+        return lista;
+    }
+      
+      public LinkedList<Ranking_set_get> ranking_ready3() throws SQLException
+    {
+        LinkedList<Ranking_set_get> lista;
+        lista = new LinkedList();
+        rs = st.executeQuery("select * from usuarios_puntajes order by quiz3_puntajes desc");
+
+        while(rs.next())
+        {
+            Ranking_set_get ranking = new Ranking_set_get();
+            ranking.setUsuario(rs.getString("ID"));
+            ranking.setPuntaje(rs.getInt("quiz3_puntajes"));
+            lista.add(ranking);
+        }
+        return lista;
+    }
+      
+      public LinkedList<Ranking_set_get> ranking_readyGlobal() throws SQLException
+    {
+        LinkedList<Ranking_set_get> lista;
+        lista = new LinkedList();
+     
+        rs = st.executeQuery("select * from usuarios_puntajes order by total_puntajes desc");
+
+        while(rs.next())
+        {
+            Ranking_set_get ranking = new Ranking_set_get();
+            ranking.setUsuario(rs.getString("ID"));
+            ranking.setPuntaje(rs.getInt("total_puntajes"));
             lista.add(ranking);
         }
         return lista;

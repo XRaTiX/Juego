@@ -216,7 +216,11 @@ cursor:pointer;*/
                         </tr>
                         <%}%>
                     </table>
-                    <input type="submit" value="Agregar Nuevo Usuario">
+                    <input type="submit" value="Modificar Usuarios">
+                </form>
+                <br>
+                <form action="Administrativo.jsp">
+                    <input type="submit" value="Volver al menu principal">
                 </form>
             </div>
         </div>

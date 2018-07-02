@@ -146,7 +146,15 @@
 <div id="can" class="frame hidden">
 	  	</br></br>
 			<!-- opciones dentro de jugar -->
-
+        <h1>
+         RANKING
+        </h1></br>
+        <form action="ranking_global.jsp"
+	  <button onclick="game.setFrameVisible('main');game.setFrameHidden('can');">
+            <input type="submit" value="Ranking">
+            </button></br></br></br>
+        </form>
+                        
 		<button onclick="game.setFrameVisible('main');game.setFrameHidden('can');">
 		VOLVER AL MEN&Uacute; </button>
 
